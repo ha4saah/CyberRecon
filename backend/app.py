@@ -1,3 +1,4 @@
+import os
 import time
 
 from flask import Flask, request, jsonify, send_file
@@ -14,9 +15,6 @@ from scanner.vulnerability import analyze_vulnerabilities
 from scanner.subdomain import find_subdomains
 from report_generator import generate_report
 
-
-import os
-
 app = Flask(__name__)
 
 CORS(
@@ -29,8 +27,8 @@ CORS(
             ]
         }
     },
+    supports_credentials=True,
 )
-
 
 
 @app.get("/")
