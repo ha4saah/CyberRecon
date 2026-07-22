@@ -16,35 +16,6 @@ export interface PortData {
   service: string;
 }
 
-export interface ScanResponse {
-
-  success: boolean;
-
-  target: string;
-
-  summary: {
-    risk_score: number;
-    risk_level: string;
-    scan_time: number;
-    open_ports: number;
-  };
-
-  dns: any;
-
-  ports: any[];
-
-  headers: any;
-
-  ssl: SSLData;
-
-  whois: WhoisData;
-
-  technology: TechnologyData;
-
-  findings: Finding[];
-
-  subdomains: Subdomain[];
-}
 export interface SecurityHeaders {
   "Strict-Transport-Security": boolean;
   "Content-Security-Policy": boolean;
@@ -59,6 +30,7 @@ export interface SSLData {
   expires: string | null;
   days_remaining: number | null;
 }
+
 export interface WhoisData {
   domain_name: string | null;
   registrar: string | null;
@@ -67,6 +39,7 @@ export interface WhoisData {
   country: string | null;
   organization: string | null;
 }
+
 export interface TechnologyData {
   server: string;
   powered_by: string;
@@ -74,6 +47,7 @@ export interface TechnologyData {
   cms: string;
   framework: string;
 }
+
 export interface Finding {
   severity: string;
   title: string;
@@ -83,4 +57,29 @@ export interface Finding {
 export interface Subdomain {
   subdomain: string;
   ip: string;
+}
+
+export interface ScanResponse {
+  success: boolean;
+  target: string;
+
+  summary: Summary;
+
+  dns: DNSData;
+
+  ports: PortData[];
+
+  headers: SecurityHeaders;
+
+  ssl: SSLData;
+
+  whois: WhoisData;
+
+  technology: TechnologyData;
+
+  findings: Finding[];
+
+  recommendations: string[];
+
+  subdomains: Subdomain[];
 }

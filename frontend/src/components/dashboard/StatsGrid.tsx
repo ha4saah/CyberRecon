@@ -1,8 +1,8 @@
 import ResultCard from "./ResultCard";
-import type { SummaryData } from "../../types/scan";
+import type { Summary } from "../../types/scan";
 
 type Props = {
-  summary?: SummaryData;
+ summary?: Summary;
 };
 
 export default function StatsGrid({ summary }: Props) {
