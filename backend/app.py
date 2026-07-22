@@ -25,7 +25,7 @@ CORS(
         r"/*": {
             "origins": [
                 "http://localhost:5173",
-                "https://your-project-name.vercel.app",
+                "https://cyber-recon.vercel.app",
             ]
         }
     },
