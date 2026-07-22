@@ -20,13 +20,13 @@ A modern network reconnaissance platform built with **React**, **TypeScript**, *
 
 ### Scan Results
 
-![Results](screenshots/scan-results.png)
+![Results](screenshots/scan-results.PNG)
 
 ---
 
 ### PDF Report
 
-![PDF Report](screenshots/pdf-report.png)
+![PDF Report](screenshots/pdf-report.PNG)
 
 ---
 
